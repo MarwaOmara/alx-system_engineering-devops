@@ -1,2 +1,5 @@
 #!/bin/bash
-find . -type d -empty -or -type f -empty | printf '%f\n'
+find . -type d -empty -or -type f -empty | while read -r file; do
+  echo "$file"
+done
+
